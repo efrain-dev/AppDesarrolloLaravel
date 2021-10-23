@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+Route::get('/usuarios',\App\Http\Livewire\CrudUsuario::class)->name('userCrud')->middleware(['auth']);
+Route::get('/usuarios',\App\Http\Livewire\CrudUsuario::class)->name('userCrud')->middleware(['auth']);

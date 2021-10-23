@@ -19,5 +19,14 @@
         "postcss": "^8.1.14",
         "postcss-import": "^14.0.1",
         "tailwindcss": "^2.2.2"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.2",
+        "@popperjs/core": "^2.6.0",
+        "@types/jquery": "^3.5.5",
+        "bootstrap": "^5.0.0-beta1",
+        "popper.js": "^1.16.1",
+        "sweetalert2": "^10.14.0",
+        "postcss-cli": "^8.1.0"
     }
 }

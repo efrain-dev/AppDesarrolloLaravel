@@ -43,4 +43,8 @@
 
         @livewireScripts
     </body>
+    <script src="{{ asset('js/general.js') }}" defer></script>
+
+    @stack('script')
+    @stack('modals')
 </html>
