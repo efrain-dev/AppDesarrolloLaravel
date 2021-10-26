@@ -25,10 +25,10 @@
             </div>
             <div class="w-full px-3 mb-6 md:mb-0 my-5">
                 <label for="passwordInput" class="block text-gray-700 text-sm font-bold mb-2">Ingrese la
-                    password</label>
-                <input type="text" class="form_control @error('password') is-invalid @enderror" id="passwordInput"
-                       placeholder="Ingrese la password" wire:model="password">
-                @error('password') <span class="text-red-500">{{ $message }}</span>@enderror
+                    github</label>
+                <input type="text" class="form_control @error('github') is-invalid @enderror" id="passwordInput"
+                       placeholder="Ingrese su github" wire:model="github">
+                @error('github') <span class="text-red-500">{{ $message }}</span>@enderror
             </div>
         </div>
     </x-slot>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ApiUserController;
+use App\Http\Controllers\AuthApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,4 +19,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/usuarios', [ApiUserController::class,'index']);
+
+Route::post('/register',[AuthApiController::class,'register']);
+Route::post('/login',[AuthApiController::class,'login']);
+Route::get('/user',[AuthApiController::class,'infoUser'])->middleware('auth:sanctum');
+Route::post('/logout',[AuthApiController::class,'logout'])->middleware('auth:sanctum');
+
+Route::get('/usuarios', [AuthApiController::class,'index']);

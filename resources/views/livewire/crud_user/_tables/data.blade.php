@@ -24,6 +24,10 @@
                     </th>
                     <th scope="col"
                         class="table__th">
+                        Github
+                    </th>
+                    <th scope="col"
+                        class="table__th">
                         Opciones
                     </th>
                 </tr>
@@ -32,7 +36,7 @@
                 @foreach($users as $user)
                     <tr>
                         <td class="table__td">
-                            {{ $user->id }}
+                            {{ $user->id_cliente }}
                         </td>
                         <td class="table__td">
                             {{ $user->name }}
@@ -44,12 +48,16 @@
                             {{ $user->profile_photo_path}}
                         </td>
                         <td class="table__td">
+                            {{ $user->github}}
+                        </td>
+
+                        <td class="table__td">
                             <div class="inline-block whitespace-no-wrap">
-                                <button wire:click="edit({{ $user->id }})"
+                                <button wire:click="edit({{ $user->id_cliente }})"
                                         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                                     Editar
                                 </button>
-                                <button wire:click="$emit('triggerDelete',{{ $user->id }})"
+                                <button wire:click="$emit('triggerDelete',{{ $user->id_cliente }})"
                                         class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                                     Eliminar
                                 </button>
