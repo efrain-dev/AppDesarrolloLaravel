@@ -26,7 +26,7 @@ class PostRequestCustomer extends FormRequest
         return [
             'id_cliente' => 'nullable',
             'name' => 'required|max:255',
-            'email' => 'required|email|max:255||unique:cliente,email,' . $this->route('id') . ',id_cliente',
+            'email' => 'required|email|max:255|unique:cliente,email,' . $this->route('id') . ',id_cliente',
             'github' => 'required|max:45',
             'profile_photo_path' => 'required|max:45'
         ];
