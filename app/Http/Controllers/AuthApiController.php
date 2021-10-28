@@ -14,9 +14,8 @@ class AuthApiController extends Controller
 {
     public function index()
     {
-        return Client::all();
+        return User::all();
     }
-
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), ['name' => 'required|max:255', 'email' => 'required|email|max:255|unique:users', 'password' => 'required|max:8']);
