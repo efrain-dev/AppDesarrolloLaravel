@@ -24,12 +24,13 @@ class CustomerController extends Controller
     public function store(PostRequestCustomer $request)
     {
         $data = $request->validated();
-        Client::updateOrCreate(['id_cliente' => $data['id_cliente']], [
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'github' => $data['github'],
-            'profile_photo_path' => $data['profile_photo_path']
-        ]);
+        $cliente = new Client();
+        $cliente->id_cliente = $data['id_cliente'];
+        $cliente->name = $data['name'];
+        $cliente->email = $data['email'];
+        $cliente->github = $data['github'];
+        $cliente->profile_photo_path = $data['profile_photo_path'];
+        $cliente->save();
         return response()->json([
             'mensaje'=> 'Creado con exito'
         ]);
