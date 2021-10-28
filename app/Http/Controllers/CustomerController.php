@@ -24,8 +24,7 @@ class CustomerController extends Controller
     public function store(PostRequestCustomer $request)
     {
         $data = $request->validated();
-        $cliente = new Client();
-        $cliente->id_cliente = $data['id_cliente'];
+        $cliente =Client::find($data['id_cliente'])?:new Client();
         $cliente->name = $data['name'];
         $cliente->email = $data['email'];
         $cliente->github = $data['github'];
