@@ -24,6 +24,7 @@ class PostRequestCustomer extends FormRequest
     public function rules()
     {
         return [
+            'id_cliente' => 'nullable',
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:cliente',
             'github' => 'required|max:45',
