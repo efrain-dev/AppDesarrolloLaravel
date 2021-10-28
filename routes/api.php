@@ -25,4 +25,4 @@ Route::post('/login',[AuthApiController::class,'login']);
 Route::get('/user',[AuthApiController::class,'infoUser'])->middleware('auth:sanctum');
 Route::post('/logout',[AuthApiController::class,'logout'])->middleware('auth:sanctum');
 
-Route::get('/usuarios', [AuthApiController::class,'index']);
+Route::get('/usuarios', [AuthApiController::class,'index'])->middleware('auth:sanctum');
