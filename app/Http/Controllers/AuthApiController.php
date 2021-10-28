@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -13,7 +14,7 @@ class AuthApiController extends Controller
 {
     public function index()
     {
-        return User::all();
+        return Client::all();
     }
 
     public function register(Request $request)
